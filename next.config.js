@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	experimental: {
+		serverActions: true,
+		scrollRestoration: true,
+	},
+	images: {
+		domains: ["utfs.io"],
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
