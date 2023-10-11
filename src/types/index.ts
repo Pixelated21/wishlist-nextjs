@@ -1,3 +1,5 @@
+import { FileWithPath } from "react-dropzone";
+
 export interface NavigationItem {
 	name: string;
 	url: string;
@@ -36,6 +38,7 @@ export interface Product {
 	id: number;
 	name: string;
 	description: string;
+	image_url: string;
 	is_acquired: number;
 	created_at: string;
 	updated_at: string;
@@ -43,4 +46,14 @@ export interface Product {
 
 export interface ProductWithWishlist extends Product {
 	wishlist: WishList;
+}
+
+export type FileWithPreview = FileWithPath & {
+	preview: string;
+};
+
+export interface StoredFile {
+	id: string;
+	name: string;
+	url: string;
 }

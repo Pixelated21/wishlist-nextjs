@@ -25,7 +25,7 @@ import { toast } from "sonner"
 import * as z from "zod"
 import { useRef } from "react"
 import { watch } from "fs"
-import { EditWishListFormSchema } from "@/lib/schema/wishlist"
+import { EditWishListFormSchema } from "@/lib/validations/wishlist"
 
 interface EditWatchListNameProps {
     className?: string

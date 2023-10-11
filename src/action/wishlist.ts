@@ -3,7 +3,7 @@
 import {
 	AddWishListFormSchema,
 	EditWishListFormSchema,
-} from "@/lib/schema/wishlist";
+} from "@/lib/validations/wishlist";
 import { WishList } from "@/types";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { get } from "http";

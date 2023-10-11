@@ -9,6 +9,7 @@ import CopyButton from "./actions/copy-text"
 import { PencilIcon } from "lucide-react"
 import { UploadButton } from "@/utils/uploadthing"
 import UploadButtonContainer from "./upload-button"
+import { AddProductForm } from "./forms/add-product-form"
 
 interface WishlistSecondaryNavProps extends React.HTMLAttributes<HTMLElement> {
     wishlist: WishlistWithProducts
@@ -22,10 +23,10 @@ const WishlistSecondaryNav = (props: WishlistSecondaryNavProps) => {
             <div className="h-full w-full flex flex-row justify-between">
                 <div className="flex w-full gap-4">
                     <div className="relative ">
-                        <div className="absolute top-2 left-2 z-10">
+                        {/* <div className="absolute top-2 left-2 z-10">
                             <UploadButtonContainer />
                             <Button className="rounded-full text-white group" variant={'ghost'} size={'icon'}> <PencilIcon className="h-5 w-5 text-white group-hover:text-gray-500" /> </Button>
-                        </div>
+                        </div> */}
                         <div className="h-full w-72 rounded-md relative overflow-hidden">
                             <Image src="https://utfs.io/f/1e143b0c-e35b-4933-9fdd-fdfd60c97177-f9dh9n.jpg" className="object-cover absolute" alt="Picture of the author" width={1920} height={2401} />
                         </div>
@@ -36,9 +37,9 @@ const WishlistSecondaryNav = (props: WishlistSecondaryNavProps) => {
 
                     <div className="flex-1 flex-col h-full flex items-end ">
                         <div className="flex justify-end gap-x-3 max-w-fit  py-2 px-2 rounded-md bg-gray-50 border border-gray-200 ">
-                            <AddProduct wishlist={wishlist}>
+                            <AddProductForm wishlist={wishlist}>
                                 <Button variant={'default'}>Add Product</Button>
-                            </AddProduct>
+                            </AddProductForm>
                             <RemoveWishlist wishlist={wishlist}>
                                 <Button variant={'outline'}>Remove List</Button>
                             </RemoveWishlist>

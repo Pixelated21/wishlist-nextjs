@@ -6,7 +6,6 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { Toaster } from 'sonner';
-import "@uploadthing/react/styles.css";
 
 const inter = Inter({ subsets: ['latin'] })
 

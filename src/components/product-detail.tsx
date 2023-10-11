@@ -2,7 +2,7 @@ import { Product } from "@/types"
 import Image from "next/image"
 import { Button } from "./ui/button"
 import { Heart } from "lucide-react"
-import { formatCurrency } from "@/lib/utils"
+import { formatPrice } from "@/lib/utils"
 
 interface ProductDetailProps extends React.HTMLAttributes<HTMLDivElement> {
     product: Product
@@ -18,7 +18,7 @@ const ProductDetail = (props: ProductDetailProps) => {
                     <div className="space-y-4">
                         <div className="relative overflow-hidden rounded-lg bg-gray-100">
                             <Image
-                                src="https://utfs.io/f/1e143b0c-e35b-4933-9fdd-fdfd60c97177-f9dh9n.jpg"
+                                src={product.image_url}
                                 width={600}
                                 height={700}
                                 loading="lazy"
@@ -55,7 +55,7 @@ const ProductDetail = (props: ProductDetailProps) => {
                         <div className="mb-4 mt-10">
                             <div className="flex items-end gap-2">
                                 <span className="text-xl font-bold text-gray-800 md:text-2xl">
-                                    {formatCurrency(product.price)} USD
+                                    {formatPrice(product.price)} USD
                                 </span>
                             </div>
                         </div>

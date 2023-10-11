@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { AddProductFormSchema } from "@/lib/schema/product";
+import { productSchema } from "@/lib/validations/product";
 import { WishList } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PropsWithChildren, useState } from "react";
@@ -30,15 +30,15 @@ import * as z from "zod";
 
 interface AddProductProps extends PropsWithChildren {
     wishlist?: WishList,
+    children?: React.ReactNode
 }
 
-const AddProduct = (props: AddProductProps) => {
-    const { wishlist, children } = props;
+const AddProduct = ({ wishlist, children }: AddProductProps) => {
     const [open, setOpen] = useState(false);
     // const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
-    const form = useForm<z.infer<typeof AddProductFormSchema>>({
-        resolver: zodResolver(AddProductFormSchema),
+    const form = useForm<z.infer<typeof productSchema>>({
+        resolver: zodResolver(productSchema),
     })
 
     // function onSubmit(event: React.SyntheticEvent) {
@@ -50,8 +50,12 @@ const AddProduct = (props: AddProductProps) => {
     //     }, 3000)
     // }
 
-    function onSubmit(data: z.infer<typeof AddProductFormSchema>) {
-        toast.promise(addProductAction(data, wishlist?.wishlist_code!), {
+    function onSubmit(data: z.infer<typeof productSchema>) {
+        toast.promise(addProductAction({
+            ...data,
+            wishlist_code: wishlist?.wishlist_code,
+            null: null
+        }), {
             loading: 'Loading...',
             success: async (res) => {
                 setOpen(false);

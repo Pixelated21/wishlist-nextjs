@@ -20,8 +20,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { AddProductFormSchema } from "@/lib/schema/product";
-import { AddWishListFormSchema } from "@/lib/schema/wishlist";
+import { AddProductFormSchema } from "@/lib/validations/product";
+import { AddWishListFormSchema } from "@/lib/validations/wishlist";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PropsWithChildren, useState } from "react";
 import { useForm } from "react-hook-form";
