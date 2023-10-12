@@ -1,9 +1,8 @@
 'use client'
 
+import { cn, getInitials } from "@/lib/utils"
 import { WishlistWithProducts } from "@/types"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { cn, getInitials } from "@/lib/utils"
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 
 interface SecondaryNavProps {
     className?: string

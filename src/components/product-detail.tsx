@@ -1,8 +1,8 @@
+import { formatPrice } from "@/lib/utils"
 import { Product } from "@/types"
+import { Heart } from "lucide-react"
 import Image from "next/image"
 import { Button } from "./ui/button"
-import { Heart } from "lucide-react"
-import { formatPrice } from "@/lib/utils"
 
 interface ProductDetailProps extends React.HTMLAttributes<HTMLDivElement> {
     product: Product

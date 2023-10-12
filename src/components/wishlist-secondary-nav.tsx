@@ -1,15 +1,11 @@
 import { cn } from "@/lib/utils"
 import { WishlistWithProducts } from "@/types"
 import Image from "next/image"
-import AddProduct from "./actions/product/add-product"
+import CopyButton from "./actions/copy-text"
 import { RemoveWishlist } from "./actions/wishlist/delete-wishlist"
 import EditWatchListName from "./actions/wishlist/edit-wishlist-name"
-import { Button } from "./ui/button"
-import CopyButton from "./actions/copy-text"
-import { PencilIcon } from "lucide-react"
-import { UploadButton } from "@/utils/uploadthing"
-import UploadButtonContainer from "./upload-button"
 import { AddProductForm } from "./forms/add-product-form"
+import { Button } from "./ui/button"
 
 interface WishlistSecondaryNavProps extends React.HTMLAttributes<HTMLElement> {
     wishlist: WishlistWithProducts
@@ -27,7 +23,8 @@ const WishlistSecondaryNav = (props: WishlistSecondaryNavProps) => {
                             <UploadButtonContainer />
                             <Button className="rounded-full text-white group" variant={'ghost'} size={'icon'}> <PencilIcon className="h-5 w-5 text-white group-hover:text-gray-500" /> </Button>
                         </div> */}
-                        <div className="h-full w-72 rounded-md relative overflow-hidden">
+                        <div className="h-full w-72 flex justify-center items-center rounded-md relative overflow-hidden">
+                            {/* <span className="text-3xl">No Image</span> */}
                             <Image src="https://utfs.io/f/1e143b0c-e35b-4933-9fdd-fdfd60c97177-f9dh9n.jpg" className="object-cover absolute" alt="Picture of the author" width={1920} height={2401} />
                         </div>
                     </div>

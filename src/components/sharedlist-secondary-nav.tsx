@@ -1,10 +1,6 @@
 import { cn } from "@/lib/utils"
 import { WishlistWithProducts } from "@/types"
 import Image from "next/image"
-import AddProduct from "./actions/product/add-product"
-import { RemoveWishlist } from "./actions/wishlist/delete-wishlist"
-import EditWatchListName from "./actions/wishlist/edit-wishlist-name"
-import { Button } from "./ui/button"
 
 interface SharedlistSecondaryNavProps {
     className?: string

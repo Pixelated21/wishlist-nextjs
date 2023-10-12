@@ -1,6 +1,6 @@
 import { BreadcrumbItem } from "@/types";
-import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
     breadcrumbs?: BreadcrumbItem[];

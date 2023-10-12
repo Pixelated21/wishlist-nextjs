@@ -1,11 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogoutLink, getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { SearchIcon } from "lucide-react";
-import Link from "next/link";
-import { NavigationLinks } from "./navigation-link-container";
-import { Input } from "./ui/input";
-import { redirect } from "next/navigation";
-import { getInitials } from "@/lib/utils";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -13,8 +6,13 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { siteConfig } from "@/config/site";
+import { getInitials } from "@/lib/utils";
+import { LogoutLink, getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { NavigationLinks } from "./navigation-link-container";
 
 
 const HeaderNavigationBar = () => {

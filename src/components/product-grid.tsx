@@ -1,9 +1,9 @@
+import { cn } from "@/lib/utils";
 import { WishlistWithProducts } from "@/types";
+import React from "react";
 import AddProduct from "./actions/product/add-product";
 import AddResourceCard from "./add-resource-card";
 import ProductCard from "./product-card";
-import { cn } from "@/lib/utils";
-import React from "react";
 
 interface ProductGridProps extends React.HTMLAttributes<HTMLDivElement> {
     wishlist: WishlistWithProducts,

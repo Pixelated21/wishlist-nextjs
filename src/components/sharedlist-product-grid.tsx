@@ -1,6 +1,4 @@
 import { WishlistWithProducts } from "@/types";
-import AddProduct from "./actions/product/add-product";
-import AddResourceCard from "./add-resource-card";
 import ProductCard from "./product-card";
 
 interface SharedlistProductGridProps {
